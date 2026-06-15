@@ -1,29 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Funnel } from "@/components/Funnel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Mounjaro Natural — Controle sua fome e emagreça" },
+      { name: "description", content: "Descubra em 1 minuto como milhares de mulheres estão secando a barriga com o Mounjaro Natural." },
+      { property: "og:title", content: "Mounjaro Natural — Controle sua fome e emagreça" },
+      { property: "og:description", content: "Descubra em 1 minuto como milhares de mulheres estão secando a barriga com o Mounjaro Natural." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <Funnel />;
 }
