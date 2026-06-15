@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./funnel.css";
 import perfilCaroline from "@/assets/perfil-caroline.png.asset.json";
 import comparativoResultados from "@/assets/comparativo-resultados.png.asset.json";
@@ -119,8 +119,38 @@ function Battery({ percent, variant, label }: { percent: number; variant: "low" 
 
 function WhatsAppAudio({ avatarUrl }: { avatarUrl: string }) {
   const [avatarFailed, setAvatarFailed] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+    } else {
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch {
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+  };
+
   return (
     <div className="funnel-audio-player">
+      <audio
+        ref={audioRef}
+        src="https://media.vocaroo.com/mp3/1jlkbQZcmW1t"
+        preload="none"
+        onEnded={handleEnded}
+      />
       {avatarFailed ? (
         <div className="funnel-audio-avatar">C</div>
       ) : (
@@ -132,7 +162,13 @@ function WhatsAppAudio({ avatarUrl }: { avatarUrl: string }) {
           onError={() => setAvatarFailed(true)}
         />
       )}
-      <button className="funnel-audio-play" aria-label="Reproduzir áudio">▶</button>
+      <button
+        className="funnel-audio-play"
+        aria-label={isPlaying ? "Pausar áudio" : "Reproduzir áudio"}
+        onClick={togglePlay}
+      >
+        {isPlaying ? "❚❚" : "▶"}
+      </button>
       <div style={{ flex: 1 }}>
         <div className="funnel-audio-wave">
           {Array.from({ length: 28 }).map((_, i) => (
