@@ -160,7 +160,7 @@ function Timer() {
   );
 }
 
-const WA_AVATAR = "https://i.imgur.com/pUwfPYm.jpg";
+const WA_AVATAR = "https://i.imgur.com/3g2wgHq.png";
 const WA_GALLERY = [
   "https://i.imgur.com/e5H9JpB.png",
   "https://i.imgur.com/amKy1N5.png",
@@ -419,7 +419,7 @@ export function Funnel() {
             <h2 className="funnel-title">Perfeito. Você está no lugar certo!</h2>
             <img
               width="100%"
-              src="https://i.imgur.com/onhl4CS.png"
+              src="https://i.imgur.com/EvNcigW.png"
               alt="Perfil Instagram — Caroline Rafasky · Emagrecimento"
               loading="lazy"
             />
