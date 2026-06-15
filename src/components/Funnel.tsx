@@ -320,15 +320,14 @@ export function Funnel() {
             <h2 className="funnel-title">
               Mais de 100 mil mulheres já testaram esse método e tiveram resultados reais!
             </h2>
+            <p className="funnel-text" style={{ textAlign: "center" }}>
+              Olha o que aconteceu com a Luana: a calça dela voltou a servir em poucos dias 😳 E o melhor? Sem dieta maluca, só com um método natural!
+            </p>
             <VimeoEmbed id="1123295105" title="Depoimento Luana" />
-            <div className="funnel-screenshot-gallery">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className="funnel-screenshot-placeholder">
-                  Depoimento {i + 1}
-                  <small>Imagem de depoimento</small>
-                </div>
-              ))}
-            </div>
+            <img width="100%" src="https://i.imgur.com/1Voc7Fn.png" alt="Depoimento" loading="lazy" />
+            <VimeoEmbed id="1025502310" title="Depoimento" />
+            <img width="100%" src="https://i.imgur.com/5qt2y86.png" alt="Depoimento" loading="lazy" />
+            <img width="100%" src="https://i.imgur.com/U58IRnm.png" alt="Depoimento" loading="lazy" />
             <p className="funnel-text" style={{ textAlign: "center" }}>
               Clique no botão abaixo e veja como aplicar o mesmo plano na sua rotina:
             </p>
@@ -404,9 +403,9 @@ export function Funnel() {
         return (
           <div className="funnel-step">
             <img
-              src={comparativoResultados.url}
+              width="100%"
+              src="https://i.imgur.com/qDyLa9u.png"
               alt="Comparativo de Resultados — Sem o Chá vs Com o Chá"
-              className="funnel-image"
               loading="lazy"
             />
             <h2 className="funnel-title">
