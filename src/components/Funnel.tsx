@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./funnel.css";
 import perfilCaroline from "@/assets/perfil-caroline.png.asset.json";
 import comparativoResultados from "@/assets/comparativo-resultados.png.asset.json";
