@@ -164,7 +164,6 @@ const WA_AVATAR = "https://i.imgur.com/pUwfPYm.jpg";
 const WA_GALLERY = [
   "https://i.imgur.com/e5H9JpB.png",
   "https://i.imgur.com/amKy1N5.png",
-  "https://i.imgur.com/fAcE7yY.png",
   "https://i.imgur.com/kGo2rH1.png",
 ];
 
@@ -419,9 +418,9 @@ export function Funnel() {
           <div className="funnel-step">
             <h2 className="funnel-title">Perfeito. Você está no lugar certo!</h2>
             <img
-              src={perfilCaroline.url}
+              width="100%"
+              src="https://i.imgur.com/onhl4CS.png"
               alt="Perfil Instagram — Caroline Rafasky · Emagrecimento"
-              className="funnel-image"
               loading="lazy"
             />
             <p className="funnel-text">
